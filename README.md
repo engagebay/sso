@@ -30,7 +30,7 @@ Here are the steps of the single sign-on authentication process:
 
 5. Your script builds a JWT request that contains the relevant user data.
 
-6. You redirect the customer to the EngageBay endpoint at https:// mycompany.engagebay.com/access/ssologin with the JWT payload.
+6. You redirect the customer to the EngageBay endpoint at https:// mycompany.engagebay.com/ssologin with the JWT payload.
 
 7. EngageBay parses the user detail from the JWT payload and then grants the user a session.
 
@@ -38,7 +38,7 @@ As you can see, this process relies on browser redirects and passing signed mess
 
 ### Configuring your JWT implementation : 
 
-To perform SSO for a user, you need to send several required user attributes to EngageBay as a base64-encoded hash (hash table, dictionary). Most importantly, EngageBay requires an email address to uniquely identify the user. Beyond the required attributes, which are shown in the table below, you may optionally send additional user profile data. This data is synced between your user management system and your EngageBay.
+To complete SSO for a user, you need to   to send several required user attributes to EngageBay as a base64-encoded hash (hash table, dictionary). Most importantly, EngageBay requires an email address to uniquely identify the user. Beyond the required attributes, which are shown in the table below, you may optionally send additional user profile data. This data is synced between your user management system and your EngageBay.
 
 The JWT payload must be sent to your EngageBay domain using the https protocol. Example: https://mycompany.engagebay.com/ssologin/jwt?jwt={payload}
 
@@ -50,17 +50,13 @@ The JWT payload must be sent to your EngageBay domain using the https protocol. 
 
 ### Error handling : 
 
-1. If EngageBay encounters an error while processing a JWT login request, it will report a message that explains what the issue is at the page https://mycompany.engagebay.com/login. Either you can login from here or correct the payload and try again SSO.
+1. If EngageBay encounters an error while processing a JWT login request, it will report a message that explains what the issue is at the page https://mycompany.engagebay.com/login. Either you could login from here or correct the payload and try SSO again.
 
 #### Enabling JWT single sign-on in your EngageBay : 
 
-1. Click on Admin Settings Preferences tabs.
-2. Click on Single Sign-On tab
-3. Enter Remote Login URL, the url where EngageBay SSO will redirect once SSO enable.
-4. Submit form and hence SSO is enable.
-5. You can desable SSO by deleting above configuration.
+1. Click on the Preferences tab under the Admin Settings.
+2. Click on Single Sign-On
+3. Enter Remote Login URL, the URL where EngageBay SSO will redirect once SSO is enabled.
+4. Submit the form to enable SSO
+5. You can disable SSO by deleting the configured settings.
 
-
-### Important information : 
-
-https://mycompany.engagebay.com/login is the alternative URL to login to EngageBay in case SSO settings is not working from user end.
