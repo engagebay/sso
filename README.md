@@ -58,5 +58,5 @@ The JWT payload must be sent to your EngageBay domain using the https protocol. 
 2. Click on Single Sign-On
 3. Enter Remote Login URL, the URL where EngageBay SSO will redirect once SSO is enabled.
 4. Submit the form to enable SSO
-5. You can disable SSO by deleting the configured settings.
+5. You can disable SSO by deleting the configured settings. 
 
