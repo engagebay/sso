@@ -40,7 +40,7 @@ As you can see, this process relies on browser redirects and passing signed mess
 
 To complete SSO for a user, you need to   to send several required user attributes to EngageBay as a base64-encoded hash (hash table, dictionary). Most importantly, EngageBay requires an email address to uniquely identify the user. Beyond the required attributes, which are shown in the table below, you may optionally send additional user profile data. This data is synced between your user management system and your EngageBay.
 
-The JWT payload must be sent to your EngageBay domain using the https protocol. Example: https://mycompany.engagebay.com/ssologin/jwt?jwt={payload}
+The JWT payload must be sent to your EngageBay domain using the https protocol. Example: https://mycompany.engagebay.com/ssologin?jwt={payload}
 
 #### Table 1. Supported attributes
 
